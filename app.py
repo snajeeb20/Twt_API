@@ -204,6 +204,7 @@ class Query(BaseModel):
 @app.post("/")
 def researchAgent(query: Query):
     query = query.query
+    content_type = query.headers.get('Content-Type')
     content = agent({"input": query})
     actual_content = content['output']
     return actual_content
