@@ -19,10 +19,11 @@ import requests
 import json
 import streamlit as st
 from langchain.schema import SystemMessage
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from langchain_community.chat_models import ChatOpenAI
 from langchain_openai import ChatOpenAI
 import openai
+from pydantic import BaseModel
 
 load_dotenv()
 brwoserless_api_key = os.getenv("BROWSERLESS_API_KEY")
