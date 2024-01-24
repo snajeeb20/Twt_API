@@ -10,3 +10,4 @@ uvicorn
 openai
 tiktoken
 streamlit
+langchain_community
